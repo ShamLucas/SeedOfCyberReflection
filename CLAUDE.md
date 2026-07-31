@@ -43,7 +43,10 @@ du jour, fidèlement, et laisser une trace propre. Tu n'es pas l'auteur.
 5. Écris les résultats dans `results/AAAA-MM-JJ.md` : sortie du script, durée,
    observations factuelles éventuelles (fichiers générés, anomalies). Les
    visualisations vont dans `results/figs/`.
-6. Commit et push avec un message descriptif commençant par `iter:`.
+6. Commit et push une seule fois, en fin de session, avec un message
+   descriptif commençant par `iter:`. Pas de commits intermédiaires.
+7. Les dépendances sont dans `requirements.txt` (versions épinglées pour
+   la machine d'exécution actuelle) — utilise le venv local `.venv/`.
 
 Règles :
 

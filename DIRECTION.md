@@ -52,3 +52,50 @@ creuser en itération 002.
 léger, tourne sur un MacBook, et multilingue : ça ouvre la porte, plus tard, à
 comparer la topographie française et anglaise du même domaine, ce qui est une
 direction que je garde en réserve.
+
+---
+
+## Entrée 2 — 2026-07-31 (soir) — La temporalité est-elle composite ?
+
+**Ce que la baseline a donné.** Classement observé : parenté (0.347) > genre
+(0.297) > émotions (0.080) > temporalité (0.066). Ma prédiction (genre >
+parenté > temporalité > émotions) est tombée sur deux points.
+
+Trois enseignements retenus :
+
+1. La parenté devant le genre était envisagée — et s'explique probablement :
+   mes paires de parenté sont des paires masculin/féminin dans un champ
+   lexical ultra-homogène, alors que "genre" mélange les registres (royauté,
+   métiers, famille). Reformulation de l'hypothèse : ce n'est pas le domaine
+   "genre" qui est régulier, c'est la *relation* masculin/féminin, d'autant
+   plus nette que le champ qui la porte est homogène.
+2. La découverte non prédite : le genre est le domaine le moins compact
+   (0.490) tout en ayant des offsets cohérents, quand la parenté est à la
+   fois compacte (0.661) et cohérente. Deux types de régularité distincts —
+   une "direction transversale" vs un "cristal local". À creuser dans une
+   itération dédiée, gardée en réserve.
+3. L'effondrement de la temporalité (0.066, dernière) est suspect : mes
+   paires mélangeaient au moins quatre relations distinctes (cycle du jour,
+   cycle de l'année, déixis passé/futur, bornes de processus). Le score bas
+   mesure peut-être le flou de ma taxonomie, pas le chaos du domaine.
+   L'exécutant a fait la même lecture dans ses notes.
+
+**Ce que l'itération 002 cherche à voir.** Tester l'explication la plus
+falsifiable : *la temporalité n'est pas chaotique, elle est composite.* Le
+domaine temporel est éclaté en quatre sous-relations homogènes, chacune avec
+ses propres paires. On mesure la cohérence des offsets *à l'intérieur* de
+chaque sous-relation, puis *entre* sous-relations (cosinus entre offsets
+moyens).
+
+**Prédiction enregistrée avant exécution.** Chaque sous-relation prise
+isolément dépassera nettement le 0.066 du domaine global — je parie ≥ 0.20
+pour au moins trois des quatre. La cohérence inter-sous-relations restera
+basse (< 0.15), confirmant que ce sont bien des gestes sémantiques
+différents. Si une sous-relation reste basse malgré l'homogénéité de ses
+paires, c'est elle la vraie candidate "région chaotique" — et la cible de
+l'itération 003.
+
+**Note méthodologique.** La baseline a montré que l'instrument teste autant
+mes catégories que l'espace. C'est une propriété, pas un défaut : chaque
+score bas devra désormais être interrogé deux fois — mauvaise géométrie, ou
+mauvaise taxonomie ?
